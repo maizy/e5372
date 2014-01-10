@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<response>
+<AccessList>
+<Access>00</Access>
+<Access>01</Access>
+<Access>02</Access>
+<Access>03</Access>
+</AccessList>
+<BandList>
+<Band>
+<Name>GSM900/GSM1800/WCDMA900/WCDMA2100</Name>
+<Value>2000000400380</Value>
+</Band>
+</BandList>
+<LTEBandList>
+<LTEBand>
+<Name>All bands</Name>
+<Value>7ffffffffffffff</Value>
+</LTEBand>
+</LTEBandList>
+</response>

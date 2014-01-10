@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<request>
+    <NetworkMode>01</NetworkMode>
+    <NetworkBand>3FFFFFFF</NetworkBand>
+    <LTEBand>800C5</LTEBand>
+</request>
