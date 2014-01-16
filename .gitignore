@@ -24,3 +24,4 @@ venv/
 
 # project specific
 /data/
+/huapi.cfg
