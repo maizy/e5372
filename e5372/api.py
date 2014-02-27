@@ -6,8 +6,8 @@ from functools import partial
 
 import requests
 
-from huapi.context import get_default_context
-from huapi import consts, etree, Error
+from e5372.context import get_default_context
+from e5372 import consts, etree, Error
 
 get_request = requests.get
 

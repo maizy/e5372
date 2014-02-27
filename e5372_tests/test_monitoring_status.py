@@ -6,8 +6,8 @@ from os import path
 
 from requests import Response
 
-from huapi import api, consts
-from huapi_tests import RESPONSES_PATH
+from e5372 import api, consts
+from e5372_tests import RESPONSES_PATH, build_test_context
 
 
 class MonitoringStatusTest(unittest.TestCase):
@@ -26,7 +26,7 @@ class MonitoringStatusTest(unittest.TestCase):
         api.get_request = self.get_before
 
     def test_parsing(self):
-        res = api.monitoring_status()
+        res = api.monitoring_status(context=build_test_context())
         self.assertIsNotNone(res)
         self.assertEqual(type(res), api.NetworkStatus)
         self.assertEqual(res.network_type, consts.get_from_enum(consts.NETWORK_TYPES, code='LTE'))

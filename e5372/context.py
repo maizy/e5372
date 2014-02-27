@@ -4,7 +4,7 @@ from __future__ import unicode_literals, absolute_import
 import os
 from os import path
 
-from huapi import VERSION, FatalError
+from e5372 import VERSION, FatalError
 
 _default_context = {'c': None}
 
@@ -13,13 +13,13 @@ class Context(object):
 
     def __init__(self, config):
         self.config = config
-        self.user_agent = self.config.get('user_agent', 'HuApi/{}').format(VERSION)
+        self.user_agent = self.config.get('user_agent', 'e5372/{}').format(VERSION)
         self.router_host = self.config['router_host']
 
 
 def from_config_file(file_path=None):
     if file_path is None:
-        file_path = os.environ.get('HUAPI_CONFIG', 'huapi.cfg')
+        file_path = os.environ.get('E5372_CONFIG', 'e5372.cfg')
     if not path.isfile(file_path):
         raise FatalError('Config file not exists: {}'.format(file_path))
     config = {}

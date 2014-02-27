@@ -3,7 +3,7 @@ from __future__ import unicode_literals, absolute_import
 
 import unittest
 
-from huapi import consts
+from e5372 import consts
 
 
 class XmlValueTestCase(unittest.TestCase):
