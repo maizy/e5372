@@ -40,8 +40,15 @@ class NetworkStatus(_NamedtupleWithDefaultsMixin,
                                            'secondary_dns', 'wifi_users_amount'])):
 
     def report(self):
-        fields = '\n'.join('{}: {}'.format(x, str(getattr(self, x))) if getattr(self, x) is not None else '--'
-                           for x in type(self)._fields)
+
+        def _conv(x):
+            val = getattr(self, x)
+            label = x.replace('_', ' ')
+            if val is not None:
+                return label, str(val)
+            return label, '--'
+
+        fields = '\n'.join('{}: {}'.format(x, val) for x, val in map(_conv, self._fields))
         return 'Network status: \n{}'.format(fields)
 
 _to_int = lambda x: int(x.text)

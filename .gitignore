@@ -22,6 +22,11 @@ Desktop.ini
 # virtualenv
 venv/
 
+# build
+/build/
+/dist/
+*.egg-info/
+
 # project specific
 /data/
 /e5372.cfg

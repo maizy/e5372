@@ -1,10 +1,12 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='e5372',
-    version='0.1',
+    version='0.0.1',
     packages=['e5372'],
     install_requires=['requests'],
+    tests_require=['nose>=1.3', 'pep8>=1.3'],
+    test_suite='nose.collector',
     scripts=['bin/e5372_status'],
     exclude=['e5372_tests/*'],
     author='Nikita Kovaliov',
